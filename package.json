@@ -1,0 +1,29 @@
+{
+  "name": "cocktail-search",
+  "version": "1.0.0",
+  "description": "Cocktail search site built with Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chirazzzz/cocktail-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chirazzzz/cocktail-search/issues"
+  },
+  "homepage": "https://github.com/chirazzzz/cocktail-search#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

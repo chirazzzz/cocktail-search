@@ -1,0 +1,276 @@
+:root {
+  /* Colors */
+  --primary-clr: hsl(0, 73%, 77%);
+  --dark-clr: hsl(200, 18%, 26%);
+  --light-clr: hsl(34, 21%, 94%);
+  --gray-clr: hsl(71, 5%, 54%);
+  --black-bg-clr: rgba(0, 0, 0, 0.9);
+
+  /* Fonts */
+  --fs-heading-main: 3rem;
+  --fs-heading-title: 2.25rem;
+  --fs-icons: 2rem;
+  --fs-heading-card: 1.5rem;
+  --fs-reg: 1rem;
+
+  --ff-reg: "Lato", sans-serif;
+  --ff-headers: "Lobster", cursive;
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  /* Spacing */
+  --margin: 2em;
+  --nav-height: 6.25em;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Reset sourced from : https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Make all text have regular font-weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400;
+}
+
+/* Remove list styles on ul, which suggests default styling will be removed */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+  font-family: var(--ff-reg);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: var(--black-bg-clr);
+  color: var(--dark-clr);
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+input {
+  outline: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+
+/* General */
+
+.flex {
+  display: flex;
+}
+
+.container {
+  /* max-width: 120em; */
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/* Colours */
+
+.bg-primary {
+  background-color: var(--primary-clr);
+}
+
+.bg-light {
+  background-color: var(--light-clr);
+}
+
+.text-dark {
+  color: var(--dark-clr);
+}
+
+.text-primary {
+  color: var(--primary-clr);
+}
+
+.text-light {
+  color: var(--light-clr);
+}
+
+/* Typography */
+
+.ff-heading {
+  font-family: var(--ff-headers);
+}
+
+.fs-heading-main {
+  font-size: var(--fs-heading-main);
+}
+
+.fs-heading-title {
+  font-size: var(--fs-heading-title);
+}
+
+.fs-icons {
+  font-size: var(--fs-icons);
+}
+
+.fs-heading-card {
+  font-size: var(--fs-heading-card);
+}
+
+.fs-heading-main,
+.fs-heading-title,
+.fs-heading-card {
+  line-height: 1.1;
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+/* ------------------- */
+/* Main page           */
+/* ------------------- */
+
+/* Navigation */
+
+.nav-container {
+  flex-direction: column;
+  align-items: center;
+  height: var(--nav-height);
+}
+
+.site-logo {
+  max-width: 6em;
+  margin-top: 0.5em;
+}
+
+/* General Layout */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+/* Main content */
+
+.cocktails-section {
+  min-height: calc(100vh - var(--nav-height));
+  background-image: url(../img/olena-sergienko-JjGLEN7T8xI-mobile.jpg);
+  background-color: var(--black-bg-clr);
+  background-blend-mode: multiply;
+  background-size: cover;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktail-search {
+  flex-direction: column;
+}
+
+.cocktail-input {
+  border-radius: 10px;
+  border: 0;
+  padding-left: 0.5em;
+  margin-bottom: 0.3em;
+  width: 100%;
+}
+
+.cocktail-input:focus {
+  border: 2px solid var(--primary-clr);
+}
+
+.radio-buttons {
+  justify-content: space-evenly;
+}
+
+.radio-btn {
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+}
+
+.cocktails-list {
+  margin: 3em 0;
+}
+
+.cocktail {
+  background-color: var(--light-clr);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cocktail-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.cocktail-title {
+  margin: 0.5em 0;
+  text-align: center;
+}
