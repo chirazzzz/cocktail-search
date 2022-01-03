@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's Your Poison?</title>
+    <!-- Font-Awesome CDN -->
+    <script src="https://kit.fontawesome.com/221925f81a.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
+    rel="stylesheet"
     />
+    <!-- External CCS stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- https://www.thecocktaildb.com/api.php -->
     <!-- https://www.google.com/search?q=using+fetch+in+node+expressjs&oq=using+fetch+in+node+expres&aqs=chrome.2.69i57j33i22i29i30l3.14706j1j7&sourceid=chrome&ie=UTF-8 -->
+    <title>What's Your Poison?</title>
   </head>
 
   <body>
-    <nav class="bg-primary">
-      <div class="nav-container flex">
+    <header class="bg-primary">
+      <div class="logo-container flex">
         <img
           class="site-logo"
           src="img/What's your poison Logo.png"
@@ -28,9 +32,37 @@
           Choose Your Poison!
         </h2>
       </div>
-    </nav>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list flex">
+            <li class="nav__item"><a href="#home" class="text-dark fw-bold fs-heading-main nav__link">Home</a></li>
+            <div class="text-dark fw-bold fs-heading-main nav__item">Follow Us
+              <ul class="social-list flex">
+                <li class="social-list__item">
+                  <a class="nav__link" target="_blank" href="https://www.facebook.com/chirag.uk">
+                    <i class="fab fa-facebook fs-heading-main"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="nav__link" target="_blank" href="https://twitter.com/chirag_uk">
+                    <i class="fab fa-twitter fs-heading-main"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="nav__link" target="_blank" href="https://www.instagram.com/chiragm84">
+                    <i class="fab fa-instagram fs-heading-main"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <li class="nav__item"><a href="#saved" class="text-dark fw-bold fs-heading-main nav__link">Saved Cocktails</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main class="cocktails-section flex container">
+    <main class="cocktails-section flex container" id="home">
       <section class="cocktail-search flex">
         <h1 id="search-heading" class="text-primary ff-heading fs-heading-main">Cocktail Search</h1>
         <input
@@ -53,6 +85,7 @@
         
       </ul>
     </main>
+
     <script src="js/index.js"></script>
   </body>
 </html>
