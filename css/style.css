@@ -19,7 +19,7 @@
   --fw-bold: 700;
 
   /* Spacing */
-  --margin: 2em;
+  --margin: 1em;
   --nav-height: 6.25em;
 }
 
@@ -212,7 +212,7 @@ input {
 
 .main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5em;
 }
 
@@ -232,6 +232,7 @@ input {
 
 .cocktail-search {
   flex-direction: column;
+  padding-top: 2em;
 }
 
 .cocktail-input {
@@ -244,16 +245,6 @@ input {
 
 .cocktail-input:focus {
   border: 2px solid var(--primary-clr);
-}
-
-.radio-buttons {
-  justify-content: space-evenly;
-}
-
-.radio-btn {
-  width: 12px;
-  height: 12px;
-  margin-top: 6px;
 }
 
 .cocktails-list {
