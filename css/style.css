@@ -21,8 +21,19 @@
   --fw-bold: 700;
 
   /* Spacing */
-  --margin: 1em;
+  --margin: 0.5em;
   --nav-height: 6.25em;
+}
+
+@media (min-width: 46.875em) {
+  :root {
+    --fs-heading-main: 3.75rem;
+    --fs-heading-title: 2.8125rem;
+    --fs-heading-card: 1.875rem;
+    --fs-reg: 1.25rem;
+
+    --nav-height: 7.8125em;
+  }
 }
 
 /* ------------------- */
@@ -213,6 +224,12 @@ input {
   margin-top: 0.5em;
 }
 
+@media (min-width: 46.875em) {
+  .site-logo {
+    max-width: 8em;
+  }
+}
+
 nav {
   position: fixed;
   background: var(--primary-clr);
@@ -239,11 +256,12 @@ nav {
 
 .nav__link:hover,
 .nav__link:focus {
-  color: var(--gray-clr);
+  color: var(--light-clr);
   text-decoration: underline;
 }
 
 .social-list {
+  margin-top: var(--margin);
   justify-content: space-between;
 }
 
@@ -281,7 +299,6 @@ nav {
   opacity: 0;
 }
 
-
 .hamburger {
   display: block;
   position: relative;
@@ -299,14 +316,18 @@ nav {
 
 .hamburger::before,
 .hamburger::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
 }
 
-.hamburger::before { top: 6px }
-.hamburger::after { bottom: 6px }
+.hamburger::before {
+  top: 6px;
+}
+.hamburger::after {
+  bottom: 6px;
+}
 
 /* General Layout */
 
